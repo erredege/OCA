@@ -14,11 +14,11 @@ class UserController extends Controller
 
     public function show($id) {
         $usr = User::find($id);
-        return view('user.show', ['user' => $usr]);
+        return view('backend/user.show', ['user' => $usr]);
     }
 
     public function create() {
-        return view('user.form');
+        return view('backend/user.form');
     }
 
     public function store(Request $r) {
@@ -33,7 +33,7 @@ class UserController extends Controller
 
     public function edit($id) {
         $user = User::find($id);
-        return view('user.form', array('user' => $user));
+        return view('backend/user.form', array('user' => $user));
     }
 
     public function update(Request $r) {
