@@ -18,7 +18,7 @@
         Tipo:
         <select name="type">
             <option value="1" selected>Admin</option>
-            <option value="0">Pendiente de Asignación</option>
+            <option value="0">Jugador</option>
         </select>
         <input type="submit">
         </form>

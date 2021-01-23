@@ -19,6 +19,8 @@
                     @method("DELETE")
                     <input type="submit" value="Borrar">
                 </form>
+
+                <button type="button" onclick="destroy('{{route('user.destroy',$user->id)}}')">Eliminar</button>
             </td>
         <br>
     @endforeach

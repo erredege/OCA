@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
     public function index() {
         $userList = User::all();
-        return view('user.all', ['userList'=>$userList]);
+        return view('backend/user.index', ['userList'=>$userList]);
     }
 
     public function show($id) {
@@ -23,8 +24,9 @@ class UserController extends Controller
     public function store(Request $r) {
         $usr = new User();
         $usr->email = $r->email;
-        $usr->name = $r->name;
         $usr->password = $r->password;
+        $usr->type = $r->type;
+        $usr->score = $r->score;
         $usr->save();
         return redirect()->route('user.index');
     }
@@ -37,8 +39,9 @@ class UserController extends Controller
     public function update(Request $r) {
         $usr = User::find($r->id);
         $usr->email = $r->email;
-        $usr->name = $r->name;
         $usr->password = $r->password;
+        $usr->type = $r->type;
+        $usr->score = $r->score;
         $usr->save();
         return redirect()->route('user.index');
     }
