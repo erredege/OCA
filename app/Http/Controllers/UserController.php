@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function show($id) {
         $usr = User::find($id);
-        return view('backend/user.show', ['user' => $usr]);
+        return view('backend/user.show', ['userList'=>$userList]);
     }
 
     public function create() {
