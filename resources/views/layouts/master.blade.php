@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            @yield('titulo')
+            @yield('OCA temporal')
         </title>
     </head>
     <body>
@@ -12,7 +12,8 @@
 
         <div class='navigation-menu'>
             <center>
-                <h2>MENU AQUI</h2>
+                <a href='index.php'>INICIO<a>
+                <a href='{{route("user.index")}}'>USER<a>
             </center>
         </div>
 
