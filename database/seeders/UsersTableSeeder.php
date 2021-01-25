@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
@@ -34,18 +35,5 @@ class UsersTableSeeder extends Seeder
             'score' => '5000',
         ]);
 
-        DB::table('users')->insert([
-            'email' => 'jose@gmail.com',
-            'password' => '123',
-            'type' => '2',
-            'score' => '500',
-        ]);
-
-        DB::table('users')->insert([
-            'email' => 'ana@gmail.com',
-            'password' => '123',
-            'type' => '2',
-            'score' => '500',
-        ]);
     }
 }

@@ -1,13 +1,19 @@
-{{-- @extends("layouts.master") --}}
+@extends("layouts.master")
 
-@section("title", "Administración de usuarios")
+{{--@section("title", "Administración de usuarios")
 
-@section("header", "Administración de usuarios")
+@section("header", "Administración de usuarios")--}}
 
 @section("content")
-    <a href="{{ route('user.create') }}">Nuevo</a>
-    <table border='1'>
+<a href="{{ route('user.create') }}">Nuevo</a>
+<table border='1'>
     @foreach ($userList as $user)
+        <tr>
+            <td>E-mail</td>
+            <td>Puntuacion</td>
+            <td>Tipo</td>
+            <td colspan="2">Opciones</td>
+        </tr>
         <tr>
             <td>{{$user->email}}</td>
             <td>{{$user->score}}</td>

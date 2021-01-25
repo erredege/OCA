@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index() {
         $userList = User::all();
-        var_dump($userList);
+        //var_dump($userList);
         return view('backend/user.index', ['userList'=>$userList]);
     }
 
