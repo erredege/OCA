@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('type');
             $table->string('enunciate');
+            $table->unsignedBigInteger('theme_id');
             $table->timestamps();
         });
     }

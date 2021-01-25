@@ -21,7 +21,6 @@ class CreateMultimediaTable extends Migration
             $table->String("url");
             $table->String("tipe");
             $table->unsignedBigInteger('question_id');
-            $table->foreign('question_id')->references('id')->on('questions');
         });
     }
 
