@@ -17,6 +17,7 @@ class AnswersMulti extends Migration
             $table->id();
             $table->boolean('true');
             $table->string('text');
+            $table->unsignedBigInteger('question_id');
             $table->timestamps();
         });
     }

@@ -14,7 +14,8 @@ class ThemeController extends Controller
      */
     public function index()
     {
-        //
+        $themeList = Theme::all();
+        return view('backend/theme.index',['themeList'=>$themeList]);
     }
 
     /**
@@ -24,7 +25,8 @@ class ThemeController extends Controller
      */
     public function create()
     {
-        //
+        $theme = Theme::find(id);
+        return view('backend/theme.show',[themeList=>$themeList]);
     }
 
     /**
