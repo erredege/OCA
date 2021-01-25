@@ -1,6 +1,8 @@
 <html>
     <head>
-        <title>@yield('titulo')</title>
+        <title>
+            @yield('titulo')
+        </title>
     </head>
     <body>
         <div class='header'>
@@ -9,16 +11,19 @@
         </div>
 
         <div class='navigation-menu'>
-            MENU AQUI
+            <center>
+                <h2>MENU AQUI</h2>
+            </center>
         </div>
 
         <div class='main-content'>
             @yield('content')
         </div>
         
-        <div class='footer'>
-            <br>
-            <small> proyecto Celia Viñas 2ºDAW 2020/2021</small>
-        </div>
+        <footer>
+            <center>
+                <small> proyecto Celia Viñas 2ºDAW 2020/2021</small>
+            </center>
+        </footer>
     </body>
 </html>

@@ -1,8 +1,8 @@
-{{--@extends("layouts.master")--}}
+@extends("layouts.master")
 
-@section("title", "Inserción de usuario")
+{{--@section("title", "Inserción de usuario")
 
-@section("header", "Inserción de usuario")
+@section("header", "Inserción de usuario")--}}
 
 @section("content")
     @isset($user)
