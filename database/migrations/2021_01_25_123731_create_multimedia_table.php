@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateThemesTable extends Migration
+class CreateMultimediaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateThemesTable extends Migration
      */
     public function up()
     {
-        Schema::create('themes', function (Blueprint $table) {
+        Schema::create('multimedia', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->String("name");
-            $table->String("theme_img");
-            $table->integer("position_X");
-            $table->integer("position_Y");
+            $table->String("description");
+            $table->String("url");
+            $table->String("tipe");
+            $table->unsignedBigInteger('question_id');
+            $table->foreign('question_id')->references('id')->on('questions');
         });
     }
 
@@ -30,6 +32,6 @@ class CreateThemesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('themes');
+        Schema::dropIfExists('multimedia');
     }
 }
