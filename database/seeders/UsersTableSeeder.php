@@ -44,7 +44,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'email' => 'ana@gmail.com',
             'password' => '123',
-            'type' => '1',
+            'type' => '2',
             'score' => '500',
         ]);
     }

@@ -1,5 +1,8 @@
 {{-- @extends("layouts.master") --}}
 
+
+var_dump($userList);
+
 @section("title", "Administración de usuarios")
 
 @section("header", "Administración de usuarios")
