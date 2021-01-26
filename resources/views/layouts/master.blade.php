@@ -12,6 +12,7 @@
                     <a href='index.php'>INICIO<a> |
                     <a href='{{route("user.index")}}'>USER<a> |
                     <a href='{{route("multimedia.index")}}'>MULTIMEDIA<a> |
+                    <a href='{{route("theme.index")}}'>TEMATICAS<a> |
                 </center>
             </div>
             <h2>OCA temporal</h2>
