@@ -1,6 +1,11 @@
 @extends("layouts.master")
 
+@section("title", "Administración de multimedia")
+
+@section("header", "Administración de multimedia")
+
 @section("content")
+<br>
 <a href="{{ route('multimedia.create') }}">Nuevo</a>
 <table border='1'>
     @foreach ($multimediaList as $multimedia)

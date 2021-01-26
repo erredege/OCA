@@ -1,10 +1,11 @@
 @extends("layouts.master")
 
-{{--@section("title", "Administración de usuarios")
+@section("title", "Administración de usuarios")
 
-@section("header", "Administración de usuarios")--}}
+@section("header", "Administración de usuarios")
 
 @section("content")
+<br>
 <a href="{{ route('user.create') }}">Nuevo</a>
 <table border='1'>
     @foreach ($userList as $user)
