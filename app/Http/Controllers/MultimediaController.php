@@ -13,8 +13,8 @@ class MultimediaController extends Controller
     }
 
     public function show($id) {
-        $multimediaList = Multimedia::find($id);
-        return view('backend/multimedia.show', ['multimediaList'=>$multimediaList]);
+        $multi = Multimedia::find($id);
+        return view('backend/multimedia.show', ['multimediaList'=>$multi]);
     }
 
     public function create() {

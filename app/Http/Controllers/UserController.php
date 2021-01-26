@@ -14,8 +14,13 @@ class UserController extends Controller
     }
 
     public function show($id) {
+<<<<<<< HEAD
+        $user = User::find($id);
+        return view('backend/user.show', ['userList'=>$user]);
+=======
         $userList = User::find($id);
         return view('backend/user.show', ['userList'=>$userList]);
+>>>>>>> fcdae33db8cd7bb8cd5bdca63d8f36b753b1f805
     }
 
     public function create() {
@@ -23,12 +28,12 @@ class UserController extends Controller
     }
 
     public function store(Request $r) {
-        $usr = new User();
-        $usr->email = $r->email;
-        $usr->password = $r->password;
-        $usr->type = $r->type;
-        $usr->score = $r->score;
-        $usr->save();
+        $user = new User();
+        $user->email = $r->email;
+        $user->password = $r->password;
+        $user->type = $r->type;
+        $user->score = $r->score;
+        $user->save();
         return redirect()->route('user.index');
     }
 
@@ -38,18 +43,18 @@ class UserController extends Controller
     }
 
     public function update(Request $r) {
-        $usr = User::find($r->id);
-        $usr->email = $r->email;
-        $usr->password = $r->password;
-        $usr->type = $r->type;
-        $usr->score = $r->score;
-        $usr->save();
+        $user = User::find($r->id);
+        $user->email = $r->email;
+        $user->password = $r->password;
+        $user->type = $r->type;
+        $user->score = $r->score;
+        $user->save();
         return redirect()->route('user.index');
     }
 
     public function destroy($id) {
-        $usr = User::find($id);
-        $usr->delete();
+        $user = User::find($id);
+        $user->delete();
         return redirect()->route('user.index');
     }
 }

@@ -14,7 +14,7 @@ class QuestionController extends Controller
 
     public function show($id) {
         $question = Question::find($id);
-        return view('backend/question.show', ['questionList'=>$questionList]);
+        return view('backend/question.show', ['questionList'=>$question]);
     }
 
     public function create() {

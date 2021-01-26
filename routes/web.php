@@ -37,6 +37,16 @@ Route::put('/multimedia/{id}', 'MultimediaController@update')->name('multimedia.
 Route::delete('/multimedia/{id}/borrar', 'MultimediaController@destroy')->name('multimedia.destroy');
 //-------------MULTIMEDIA----------------------------------------------------
 
+//-------------RESPUESTA MULTIPLE----------------------------------------------------
+Route::get('/answerMulti', 'AnswersMultiController@index')->name('answerMulti.index');
+Route::post('/answerMulti/store', 'AnswersMultiController@store')->name('answerMulti.store');
+Route::get('/answerMulti/crear', 'AnswersMultiController@create')->name('answerMulti.create');
+Route::get('/answerMulti/{id}', 'AnswersMultiController@show')->name('answerMulti.show');
+Route::get('/answerMulti/{id}/editar', 'AnswersMultiController@edit')->name('answerMulti.edit');
+Route::put('/answerMulti/{id}', 'AnswersMultiController@update')->name('answerMulti.update');
+Route::delete('/answerMulti/{id}/borrar', 'AnswersMultiController@destroy')->name('answerMulti.destroy');
+//-------------RESPUESTA MULTIPLE----------------------------------------------------
+
 //-------------TEMAS----------------------------------------------------
 Route::get('/theme', 'ThemeController@index')->name('theme.index');
 Route::post('/theme/store', 'ThemeController@store')->name('theme.store');
