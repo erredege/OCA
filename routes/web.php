@@ -37,4 +37,14 @@ Route::get('/theme/{id}', 'ThemeController@show')->name('theme.show');
 Route::get('/theme/{id}/editar', 'ThemeController@edit')->name('theme.edit');
 Route::put('/theme/{id}', 'ThemeController@update')->name('theme.update');
 Route::delete('/theme/{id}/borrar', 'ThemeController@destroy')->name('theme.destroy');
-//-------------TEMAS----------------------------------------------------
+//-------------TEMAS------------------------------------------------------------------
+
+//-------------PREGUNTAS-----------------------------------------------------------------
+Route::get('/question', 'QuestionController@index')->name('question.index');
+Route::post('/question/store', 'QuestionController@store')->name('question.store');
+Route::get('/question/crear', 'QuestionController@create')->name('question.create');
+Route::get('/question/{id}', 'QuestionController@show')->name('question.show');
+Route::get('/question/{id}/editar', 'QuestionController@edit')->name('question.edit');
+Route::put('/question/{id}', 'QuestionController@update')->name('question.update');
+Route::delete('/question/{id}/borrar', 'QuestionController@destroy')->name('question.destroy');
+//-------------PREGUNTAS-----------------------------------------------------------------
