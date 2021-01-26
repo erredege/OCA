@@ -15,11 +15,11 @@ class CreateMultimediaTable extends Migration
     {
         Schema::create('multimedia', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->String("name");
             $table->String("description");
             $table->String("url");
             $table->String("tipe");
+            $table->timestamps();
             $table->unsignedBigInteger('question_id');
         });
     }
