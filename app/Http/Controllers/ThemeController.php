@@ -15,7 +15,7 @@ class ThemeController extends Controller
     public function index()
     {
         $themeList = Theme::all();
-        return view('backend/theme.index',['themeList'=>$themeList]);
+        return view('backend/theme/theme.index',['themeList'=>$themeList]);
     }
 
     /**
@@ -25,8 +25,7 @@ class ThemeController extends Controller
      */
     public function create()
     {
-        $theme = Theme::find(id);
-        return view('backend/theme.show',[themeList=>$themeList]);
+        return view('backend/theme/theme.form');
     }
 
     /**
@@ -37,7 +36,13 @@ class ThemeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $theme = new Theme();
+        $theme->name = $request->name;
+        $theme->theme_img = $request->theme_img;
+        $theme->position_X = $request->position_X;
+        $theme->position_Y = $request->position_Y;
+        $theme->save();
+        return redirect()->route('theme.index');
     }
 
     /**
@@ -48,7 +53,8 @@ class ThemeController extends Controller
      */
     public function show($id)
     {
-        //
+        $themeList = Theme::find($id);
+        return view('backend/theme/theme.show',['themeList'=>$themeList]);
     }
 
     /**
@@ -59,7 +65,8 @@ class ThemeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $theme = Theme::find($id);
+        return view('backend/theme/theme.form', array('theme' => $theme));
     }
 
     /**
@@ -71,7 +78,13 @@ class ThemeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $theme = Theme::find($request->$id);
+        $theme->name = $request->name;
+        $theme->theme_img = $request->theme_img;
+        $theme->position_X = $request->position_X;
+        $theme->position_Y = $request->position_Y;
+        $theme->save();
+        return redirect()->route('theme.index');
     }
 
     /**
@@ -82,6 +95,8 @@ class ThemeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $theme = Theme::find($id);
+        $theme->delete();
+        return redirect()->route('theme.index'); 
     }
 }
