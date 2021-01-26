@@ -41,4 +41,5 @@
             </td>
         <br>
     @endforeach
+</table>
 @endsection

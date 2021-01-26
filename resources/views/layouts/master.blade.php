@@ -22,6 +22,7 @@
         </div>
         
         <footer>
+            <br><br>
             <center>
                 <small> proyecto Celia Viñas 2ºDAW 2020/2021</small>
             </center>
