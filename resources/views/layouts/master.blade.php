@@ -12,7 +12,7 @@
 
         <div class='navigation-menu'>
             <center>
-                <a href='index.php'>INICIO<a>
+                <a href='index.php'>INICIO<a> |
                 <a href='{{route("user.index")}}'>USER<a>
             </center>
         </div>
