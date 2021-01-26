@@ -27,6 +27,7 @@ class MultimediaController extends Controller
         $multi->description = $r->description;
         $multi->url = $r->url;
         $multi->type = $r->type;
+        $multi->question_id = $r->question_id;
         $multi->save();
         return redirect()->route('multimedia.index');
     }
@@ -42,6 +43,7 @@ class MultimediaController extends Controller
         $multi->description = $r->description;
         $multi->url = $r->url;
         $multi->type = $r->type;
+        $multi->question_id = $r->question_id;
         $multi->save();
         return redirect()->route('multimedia.index');
     }

@@ -19,6 +19,7 @@ class MultimediaTableSeeder extends Seeder
             'description' => 'archivo de video',
             'url' => 'dsfvfdbgthtyj',
             'type' => '0',
+            'question_id' => '1',
         ]);
 
         DB::table('multimedia')->insert([
@@ -26,6 +27,7 @@ class MultimediaTableSeeder extends Seeder
             'description' => 'archivo de audio',
             'url' => 'dsfsdvdfgdfsbdfb',
             'type' => '1',
+            'question_id' => '1',
         ]);
 
         DB::table('multimedia')->insert([
@@ -33,6 +35,7 @@ class MultimediaTableSeeder extends Seeder
             'description' => 'archivo de imagen',
             'url' => 'sdfvdgbvsedfgbtrb',
             'type' => '2',
+            'question_id' => '1',
         ]);
     }
 }

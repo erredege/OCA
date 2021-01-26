@@ -19,8 +19,8 @@ class CreateMultimediaTable extends Migration
             $table->String("description");
             $table->String("url");
             $table->Integer("type");
-            $table->timestamps();
             $table->unsignedBigInteger('question_id');
+            $table->timestamps();
         });
     }
 

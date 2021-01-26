@@ -15,6 +15,8 @@
         Nombre:<input type="text" name="name" value="{{$multimedia->name ?? '' }}"><br>
         Descripcion:<input type="text" name="description" value="{{$multimedia->description ?? '' }}"><br>
         URL:<input type="text" name="url" value="{{$multimedia->url ?? '' }}"><br>
+        <!--temporal Question_id debe ser hidden y traer el id de preguntas automaticamente-->
+        Question_id:<input type="int" name="question_id" value="{{$multimedia->question_id ?? '' }}"><br>
         Tipo:
         <select name="type">
             <option value="0">Video</option>

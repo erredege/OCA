@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 //-------------USUARIO----------------------------------------------------
-
 Route::get('/user', 'UserController@index')->name('user.index');
 Route::post('/user/store', 'UserController@store')->name('user.store');
 Route::get('/user/crear', 'UserController@create')->name('user.create');
@@ -26,8 +25,17 @@ Route::get('/user/{id}', 'UserController@show')->name('user.show');
 Route::get('/user/{id}/editar', 'UserController@edit')->name('user.edit');
 Route::put('/user/{id}', 'UserController@update')->name('user.update');
 Route::delete('/user/{id}/borrar', 'UserController@destroy')->name('user.destroy');
-
 //-------------USUARIO----------------------------------------------------
+
+//-------------MULTIMEDIA----------------------------------------------------
+Route::get('/multimedia', 'MultimediaController@index')->name('multimedia.index');
+Route::post('/multimedia/store', 'MultimediaController@store')->name('multimedia.store');
+Route::get('/multimedia/crear', 'MultimediaController@create')->name('multimedia.create');
+Route::get('/multimedia/{id}', 'MultimediaController@show')->name('multimedia.show');
+Route::get('/multimedia/{id}/editar', 'MultimediaController@edit')->name('multimedia.edit');
+Route::put('/multimedia/{id}', 'MultimediaController@update')->name('multimedia.update');
+Route::delete('/multimedia/{id}/borrar', 'MultimediaController@destroy')->name('multimedia.destroy');
+//-------------MULTIMEDIA----------------------------------------------------
 
 //-------------TEMAS----------------------------------------------------
 Route::get('/theme', 'ThemeController@index')->name('theme.index');
