@@ -9,7 +9,6 @@ class MultimediaController extends Controller
 {
     public function index() {
         $multimediaList = Multimedia::all();
-        //var_dump($userList);
         return view('backend/multimedia.index', ['multimediaList'=>$multimediaList]);
     }
 
