@@ -9,18 +9,12 @@ class UserController extends Controller
 {
     public function index() {
         $userList = User::all();
-        //var_dump($userList);
         return view('backend/user.index', ['userList'=>$userList]);
     }
 
     public function show($id) {
-<<<<<<< HEAD
-        $user = User::find($id);
-        return view('backend/user.show', ['userList'=>$user]);
-=======
-        $userList = User::find($id);
+        $usr = User::find($id);
         return view('backend/user.show', ['userList'=>$userList]);
->>>>>>> fcdae33db8cd7bb8cd5bdca63d8f36b753b1f805
     }
 
     public function create() {
@@ -28,12 +22,12 @@ class UserController extends Controller
     }
 
     public function store(Request $r) {
-        $user = new User();
-        $user->email = $r->email;
-        $user->password = $r->password;
-        $user->type = $r->type;
-        $user->score = $r->score;
-        $user->save();
+        $usr = new User();
+        $usr->email = $r->email;
+        $usr->password = $r->password;
+        $usr->type = $r->type;
+        $usr->score = $r->score;
+        $usr->save();
         return redirect()->route('user.index');
     }
 
@@ -43,18 +37,18 @@ class UserController extends Controller
     }
 
     public function update(Request $r) {
-        $user = User::find($r->id);
-        $user->email = $r->email;
-        $user->password = $r->password;
-        $user->type = $r->type;
-        $user->score = $r->score;
-        $user->save();
+        $usr = User::find($r->id);
+        $usr->email = $r->email;
+        $usr->password = $r->password;
+        $usr->type = $r->type;
+        $usr->score = $r->score;
+        $usr->save();
         return redirect()->route('user.index');
     }
 
     public function destroy($id) {
-        $user = User::find($id);
-        $user->delete();
+        $usr = User::find($id);
+        $usr->delete();
         return redirect()->route('user.index');
     }
 }

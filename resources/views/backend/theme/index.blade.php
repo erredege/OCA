@@ -12,33 +12,36 @@
 
         @if ($theme->type == 0)
             @php 
-                $valor = "Jugador" 
+                $valor = "Tema no disponible" 
             @endphp
         @elseif($theme->type == 1) 
             @php 
-                $valor = "Admin" 
+                $valor = "Tema disponible" 
             @endphp
         @endif
 
         <tr>
-            <td>E-mail</td>
-            <td>Puntuacion</td>
-            <td>Tipo</td>
+            <td>Nombre de la tematica</td>
+            <td>Imagen de la tematica</td>
+            <td>Posicion X del punto</td>
+            <td>Posicion Y del punto</td>
             <td colspan="2">Opciones</td>
         </tr>
         <tr>
-            <td>{{$user->email}}</td>
-            <td>{{$user->score}}</td>
+            <td>{{$theme->name}}</td>
+            <td>{{$theme->theme_img}}</td>
+            <td>{{$theme->position_X}}</td>
+            <td>{{$theme->position_Y}}</td>
             <td>{{$valor}}</td>
-            <td><a href="{{route('user.edit', $user->id)}}">Modificar</a></td>
+            <td><a href="{{route('theme.edit', $theme->id)}}">Modificar</a></td>
             <td>
-                <form action = "{{route('user.destroy', $user->id)}}" method="POST">
+                <form action = "{{route('theme.destroy', $theme->id)}}" method="POST">
                     @csrf
                     @method("DELETE")
                     <input type="submit" value="Borrar">
                 </form>
 
-                {{--<button type="button" onclick="destroy('{{route('user.destroy',$user->id)}}')">Eliminar</button>--}}
+                {{--<button type="button" onclick="destroy('{{route('theme.destroy',$theme->id)}}')">Eliminar</button>--}}
             </td>
         <br>
     @endforeach
