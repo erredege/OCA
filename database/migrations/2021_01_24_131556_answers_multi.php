@@ -15,8 +15,8 @@ class AnswersMulti extends Migration
     {
         Schema::create('answers_multi', function (Blueprint $table) {
             $table->id();
-            $table->boolean('true');
             $table->string('text');
+            $table->boolean('true');
             $table->unsignedBigInteger('question_id');
             $table->timestamps();
         });

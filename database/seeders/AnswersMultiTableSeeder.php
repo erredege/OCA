@@ -16,13 +16,13 @@ class AnswersMultiTableSeeder extends Seeder
     {
         DB::table('answers_multi')->insert([
             'text' => 'hjghkghkghkdghkghkghk',
-            'true' => 'aaa',
+            'true' => '0',
             'question_id' => '1',
         ]);
 
         DB::table('answers_multi')->insert([
             'text' => 'hkghkgkdkdnghsfdgs',
-            'true' => 'bbb',
+            'true' => '0',
             'question_id' => '1',
         ]);
     }

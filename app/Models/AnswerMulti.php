@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class AnswerMulti extends Model
 {
+    protected $table = 'answers_multi';
     use HasFactory;
 }

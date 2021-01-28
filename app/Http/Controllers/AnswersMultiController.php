@@ -9,12 +9,12 @@ class AnswersMultiController extends Controller
 {
     public function index() {
         $answerMultiList = AnswerMulti::all();
-        return view('backend/answerMulti.index', ['answerMultiLis'=>$answerMultiLis]);
+        return view('backend/answerMulti.index', ['answerMultiList'=>$answerMultiList]);
     }
 
     public function show($id) {
         $answerMulti = AnswerMulti::find($id);
-        return view('backend/answerMulti.show', ['answerMultiLis'=>$answerMulti]);
+        return view('backend/answerMulti.show', ['answerMultiList'=>$answerMulti]);
     }
 
     public function create() {
@@ -40,7 +40,7 @@ class AnswersMultiController extends Controller
         $answerMulti->text = $r->text;
         $answerMulti->true = $r->true;
         $answerMulti->question_id = $r->question_id;
-        $question_id->save();
+        $answerMulti->save();
         return redirect()->route('answerMulti.index');
     }
 

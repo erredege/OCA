@@ -1,8 +1,8 @@
 @extends("layouts.master")
 
-@section("title", "Administración de multiRespuestas")
+@section("title", "Administración de Multi Respuestas")
 
-@section("header", "Administración de multiRespuestas")
+@section("header", "Administración de Multi Respuestas")
 
 @section("content")
 <br>
