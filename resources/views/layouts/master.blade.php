@@ -13,6 +13,7 @@
                     <a href='{{route("user.index")}}'>USER<a> |
                     <a href='{{route("multimedia.index")}}'>MULTIMEDIA<a> |
                     <a href='{{route("answerMulti.index")}}'>MULTIRESPUESTAS<a> |
+                    <a href='{{route("theme.index")}}'>TEMATICAS<a> |
                 </center>
             </div>
             <h2>OCA temporal</h2>
